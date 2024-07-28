@@ -39,18 +39,14 @@ public class RestaurantController {
 		List<Category> categoryList = categoryRepository.findAll();
 		Page<Restaurant> restaurantPage;
 		
-		Category category = new Category();
 		
-		if(categoryId != null) {
-		category = categoryRepository.getReferenceById(categoryId);
-		}
-		
+		//categoryRepository.getReferenceById(categoryId) をカテゴリ型変数にしたい
 
-		if ((keyword != null && !keyword.isEmpty()) && category != null) {
-			restaurantPage = restaurantRepository.findByCategoryAndNameLikeOrAddressLikeOrDescriptionLike(category,
+		if ((keyword != null && !keyword.isEmpty()) && categoryId != null) {
+			restaurantPage = restaurantRepository.findByCategoryAndNameLikeOrAddressLikeOrDescriptionLike(categoryRepository.getReferenceById(categoryId),
 					"%" + keyword + "%", "%" + keyword + "%", "%" + keyword + "%", pageable);
-		} else if (category != null) {
-			restaurantPage = restaurantRepository.findByCategory(category, pageable);
+		} else if (categoryId != null) {
+			restaurantPage = restaurantRepository.findByCategory(categoryRepository.getReferenceById(categoryId), pageable);
 		} else if (keyword != null && !keyword.isEmpty()) {
 			restaurantPage = restaurantRepository.findByNameLikeOrAddressLikeOrDescriptionLike(
 					 "%" + keyword + "%", "%" + keyword + "%", "%" + keyword + "%", pageable);
