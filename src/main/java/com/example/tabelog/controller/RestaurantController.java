@@ -42,8 +42,9 @@ public class RestaurantController {
 		Category category = new Category();
 		
 		if(categoryId != null) {
-		category = categoryRepository.findById(categoryId).orElse(new Category());
+		category = categoryRepository.getReferenceById(categoryId);
 		}
+		
 
 		if ((keyword != null && !keyword.isEmpty()) && category != null) {
 			restaurantPage = restaurantRepository.findByCategoryAndNameLikeOrAddressLikeOrDescriptionLike(category,
