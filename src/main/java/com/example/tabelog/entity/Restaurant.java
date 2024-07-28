@@ -1,6 +1,7 @@
 package com.example.tabelog.entity;
 
 import java.sql.Timestamp;
+import java.time.LocalTime;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -49,6 +50,17 @@ public class Restaurant {
 	@Column(name = "phone_number")
 	private String phoneNumber;
 	
+    @Column(name = "regular_holidays")
+	private String regularHolidays;
+ 
+    @Column(name = "opening_time")
+	private LocalTime openingTime;
+    
+    @Column(name = "closing_time")
+	private LocalTime closingTime;
+	
+    
+    
 	@ManyToOne
 	@JoinColumn(name = "category_id")
 	private Category category;
