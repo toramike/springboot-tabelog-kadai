@@ -128,6 +128,7 @@
                     </children>
                   </children>
                   <children xsi:type="basic:PartStack" xmi:id="_A6nXEEayEe-O5uSdkTRTqA" elementId="launch" containerData="5000" selectedElement="_A6nXEUayEe-O5uSdkTRTqA">
+                    <tags>noFocus</tags>
                     <children xsi:type="advanced:Placeholder" xmi:id="_A6nXEUayEe-O5uSdkTRTqA" elementId="org.eclipse.debug.ui.launchView" ref="_A6k6xUayEe-O5uSdkTRTqA" closeable="true">
                       <tags>View</tags>
                       <tags>categoryTag:Debug</tags>
@@ -365,24 +366,24 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:Debug</tags>
-      <menus xmi:id="_BhhCIEa2Ee-SMdkfuOf7Kw" elementId="menu:org.eclipse.debug.ui.launchView">
+      <menus xmi:id="_uJ5FUFCpEe-S4tItdM0xSA" elementId="menu:org.eclipse.debug.ui.launchView">
         <tags>ViewMenu</tags>
-        <children xsi:type="menu:DirectMenuItem" xmi:id="_BhhCIUa2Ee-SMdkfuOf7Kw" label="&#x30ea;&#x30d5;&#x30ec;&#x30c3;&#x30b7;&#x30e5;" iconURI="platform:/plugin/org.eclipse.debug.ui.launchview/icons/refresh.png"/>
-        <children xsi:type="menu:MenuSeparator" xmi:id="_BhhCIka2Ee-SMdkfuOf7Kw"/>
-        <children xsi:type="menu:DirectMenuItem" xmi:id="_BhhCI0a2Ee-SMdkfuOf7Kw" label="&#x3059;&#x3079;&#x3066;&#x7d42;&#x4e86;" iconURI="platform:/plugin/org.eclipse.debug.ui.launchview/icons/terminate_all_co.png"/>
+        <children xsi:type="menu:DirectMenuItem" xmi:id="_uJ5FUVCpEe-S4tItdM0xSA" label="&#x30ea;&#x30d5;&#x30ec;&#x30c3;&#x30b7;&#x30e5;" iconURI="platform:/plugin/org.eclipse.debug.ui.launchview/icons/refresh.png"/>
+        <children xsi:type="menu:MenuSeparator" xmi:id="_uJ5FUlCpEe-S4tItdM0xSA"/>
+        <children xsi:type="menu:DirectMenuItem" xmi:id="_uJ5FU1CpEe-S4tItdM0xSA" label="&#x3059;&#x3079;&#x3066;&#x7d42;&#x4e86;" iconURI="platform:/plugin/org.eclipse.debug.ui.launchview/icons/terminate_all_co.png"/>
       </menus>
-      <menus xsi:type="menu:PopupMenu" xmi:id="_BhhpMEa2Ee-SMdkfuOf7Kw" elementId="LaunchViewContextMenu">
-        <children xsi:type="menu:DirectMenuItem" xmi:id="_BhhpMUa2Ee-SMdkfuOf7Kw" label="&#x5b9f;&#x884c;" iconURI="platform:/plugin/org.eclipse.debug.ui.launchview/icons/run_exc.png"/>
-        <children xsi:type="menu:DirectMenuItem" xmi:id="_BhhpMka2Ee-SMdkfuOf7Kw" label="&#x30c7;&#x30d0;&#x30c3;&#x30b0;" iconURI="platform:/plugin/org.eclipse.debug.ui.launchview/icons/debug_exc.png"/>
-        <children xsi:type="menu:DirectMenuItem" xmi:id="_BhhpM0a2Ee-SMdkfuOf7Kw" label="&#x30ab;&#x30d0;&#x30ec;&#x30c3;&#x30b8;" iconURI="platform:/plugin/org.eclipse.debug.ui.launchview/icons/coverage.png"/>
-        <children xsi:type="menu:DirectMenuItem" xmi:id="_BhhpNEa2Ee-SMdkfuOf7Kw" label="&#x30d7;&#x30ed;&#x30d5;&#x30a1;&#x30a4;&#x30eb;" iconURI="platform:/plugin/org.eclipse.debug.ui.launchview/icons/profile_exc.png"/>
-        <children xsi:type="menu:MenuSeparator" xmi:id="_BhhpNUa2Ee-SMdkfuOf7Kw"/>
-        <children xsi:type="menu:DirectMenuItem" xmi:id="_BhhpNka2Ee-SMdkfuOf7Kw" label="&#x7d42;&#x4e86; &amp;&amp; &#x518d;&#x8d77;&#x52d5;" iconURI="platform:/plugin/org.eclipse.debug.ui.launchview/icons/term_restart.png" enabled="false"/>
-        <children xsi:type="menu:DirectMenuItem" xmi:id="_BhhpN0a2Ee-SMdkfuOf7Kw" label="&#x7d42;&#x4e86;" iconURI="platform:/plugin/org.eclipse.debug.ui.launchview/icons/terminate_co.png" enabled="false"/>
-        <children xsi:type="menu:MenuSeparator" xmi:id="_BhhpOEa2Ee-SMdkfuOf7Kw"/>
-        <children xsi:type="menu:DirectMenuItem" xmi:id="_BhhpOUa2Ee-SMdkfuOf7Kw" label="&#x7de8;&#x96c6;..." iconURI="platform:/plugin/org.eclipse.debug.ui.launchview/icons/edit_template.png"/>
-        <children xsi:type="menu:MenuSeparator" xmi:id="_BhhpOka2Ee-SMdkfuOf7Kw"/>
-        <children xsi:type="menu:DirectMenuItem" xmi:id="_BhhpO0a2Ee-SMdkfuOf7Kw" label="&#x524a;&#x9664;" iconURI="platform:/plugin/org.eclipse.debug.ui.launchview/icons/delete_exc.png" tooltip="Deletes the selected launch configuration"/>
+      <menus xsi:type="menu:PopupMenu" xmi:id="_uJ5sYFCpEe-S4tItdM0xSA" elementId="LaunchViewContextMenu">
+        <children xsi:type="menu:DirectMenuItem" xmi:id="_uJ5sYVCpEe-S4tItdM0xSA" label="&#x5b9f;&#x884c;" iconURI="platform:/plugin/org.eclipse.debug.ui.launchview/icons/run_exc.png"/>
+        <children xsi:type="menu:DirectMenuItem" xmi:id="_uJ5sYlCpEe-S4tItdM0xSA" label="&#x30c7;&#x30d0;&#x30c3;&#x30b0;" iconURI="platform:/plugin/org.eclipse.debug.ui.launchview/icons/debug_exc.png"/>
+        <children xsi:type="menu:DirectMenuItem" xmi:id="_uJ5sY1CpEe-S4tItdM0xSA" label="&#x30ab;&#x30d0;&#x30ec;&#x30c3;&#x30b8;" iconURI="platform:/plugin/org.eclipse.debug.ui.launchview/icons/coverage.png"/>
+        <children xsi:type="menu:DirectMenuItem" xmi:id="_uJ5sZFCpEe-S4tItdM0xSA" label="&#x30d7;&#x30ed;&#x30d5;&#x30a1;&#x30a4;&#x30eb;" iconURI="platform:/plugin/org.eclipse.debug.ui.launchview/icons/profile_exc.png"/>
+        <children xsi:type="menu:MenuSeparator" xmi:id="_uJ5sZVCpEe-S4tItdM0xSA"/>
+        <children xsi:type="menu:DirectMenuItem" xmi:id="_uJ5sZlCpEe-S4tItdM0xSA" label="&#x7d42;&#x4e86; &amp;&amp; &#x518d;&#x8d77;&#x52d5;" iconURI="platform:/plugin/org.eclipse.debug.ui.launchview/icons/term_restart.png" enabled="false"/>
+        <children xsi:type="menu:DirectMenuItem" xmi:id="_uJ5sZ1CpEe-S4tItdM0xSA" label="&#x7d42;&#x4e86;" iconURI="platform:/plugin/org.eclipse.debug.ui.launchview/icons/terminate_co.png" enabled="false"/>
+        <children xsi:type="menu:MenuSeparator" xmi:id="_uJ5saFCpEe-S4tItdM0xSA"/>
+        <children xsi:type="menu:DirectMenuItem" xmi:id="_uJ5saVCpEe-S4tItdM0xSA" label="&#x7de8;&#x96c6;..." iconURI="platform:/plugin/org.eclipse.debug.ui.launchview/icons/edit_template.png"/>
+        <children xsi:type="menu:MenuSeparator" xmi:id="_uJ5salCpEe-S4tItdM0xSA"/>
+        <children xsi:type="menu:DirectMenuItem" xmi:id="_uJ5sa1CpEe-S4tItdM0xSA" label="&#x524a;&#x9664;" iconURI="platform:/plugin/org.eclipse.debug.ui.launchview/icons/delete_exc.png" tooltip="Deletes the selected launch configuration"/>
       </menus>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_A6k6xkayEe-O5uSdkTRTqA" elementId="org.eclipse.buildship.ui.views.taskview" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Gradle &#x30bf;&#x30b9;&#x30af;" iconURI="platform:/plugin/org.eclipse.buildship.ui/icons/full/eview16/tasks_view.png" tooltip="" closeable="true">
@@ -416,7 +417,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_A5kOIkayEe-O5uSdkTRTqA" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_BcIy4Ea2Ee-SMdkfuOf7Kw" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="&#x5370;&#x5237;" command="_Au2MckayEe-O5uSdkTRTqA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_uE2NQFCpEe-S4tItdM0xSA" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="&#x5370;&#x5237;" command="_Au2MckayEe-O5uSdkTRTqA"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_A5kOI0ayEe-O5uSdkTRTqA" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -424,8 +425,8 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_A5kOJUayEe-O5uSdkTRTqA" elementId="org.eclipse.ui.workbench.edit">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_BcIy5ka2Ee-SMdkfuOf7Kw" elementId="undo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/undo_edit.png" tooltip="&#x5143;&#x306b;&#x623b;&#x3059;" enabled="false" command="_Au0-FUayEe-O5uSdkTRTqA"/>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_BcJZ8Ea2Ee-SMdkfuOf7Kw" elementId="redo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/redo_edit.png" tooltip="&#x3084;&#x308a;&#x76f4;&#x3057;" enabled="false" command="_Au1k2kayEe-O5uSdkTRTqA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_uE20VFCpEe-S4tItdM0xSA" elementId="undo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/undo_edit.png" tooltip="&#x5143;&#x306b;&#x623b;&#x3059;" enabled="false" command="_Au0-FUayEe-O5uSdkTRTqA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_uE20VVCpEe-S4tItdM0xSA" elementId="redo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/redo_edit.png" tooltip="&#x3084;&#x308a;&#x76f4;&#x3057;" enabled="false" command="_Au1k2kayEe-O5uSdkTRTqA"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_A5kOJkayEe-O5uSdkTRTqA" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -449,7 +450,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_A5kOKkayEe-O5uSdkTRTqA" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_BcJZ9ka2Ee-SMdkfuOf7Kw" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="&#x30a8;&#x30c7;&#x30a3;&#x30bf;&#x30fc;&#x306e;&#x30d4;&#x30f3;&#x7559;&#x3081;" enabled="false" type="Check" command="_Au2MFUayEe-O5uSdkTRTqA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_uE3bYVCpEe-S4tItdM0xSA" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="&#x30a8;&#x30c7;&#x30a3;&#x30bf;&#x30fc;&#x306e;&#x30d4;&#x30f3;&#x7559;&#x3081;" enabled="false" type="Check" command="_Au2MFUayEe-O5uSdkTRTqA"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_A5kOK0ayEe-O5uSdkTRTqA" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -1309,7 +1310,7 @@
     <bindings xmi:id="_AvH45UayEe-O5uSdkTRTqA" keySequence="ALT+CR" command="_Au1lCUayEe-O5uSdkTRTqA"/>
   </bindingTables>
   <bindingTables xmi:id="_Av24hEayEe-O5uSdkTRTqA" contributorURI="platform:/fragment/org.eclipse.e4.ui.workbench.renderers.swt.cocoa" bindingContext="_AujQ_UayEe-O5uSdkTRTqA">
-    <bindings xmi:id="_BTi3kUa2Ee-SMdkfuOf7Kw" keySequence="M1+W" command="_Av24gkayEe-O5uSdkTRTqA"/>
+    <bindings xmi:id="_t6pvcVCpEe-S4tItdM0xSA" keySequence="M1+W" command="_Av24gkayEe-O5uSdkTRTqA"/>
   </bindingTables>
   <bindingTables xmi:id="_A6h3cUayEe-O5uSdkTRTqA" bindingContext="_A6h3cEayEe-O5uSdkTRTqA"/>
   <bindingTables xmi:id="_A6h3c0ayEe-O5uSdkTRTqA" bindingContext="_A6h3ckayEe-O5uSdkTRTqA"/>
