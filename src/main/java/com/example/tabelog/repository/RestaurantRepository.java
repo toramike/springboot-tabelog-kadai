@@ -14,8 +14,10 @@ public interface RestaurantRepository extends JpaRepository<Restaurant, Integer>
 	//カテゴリ検索　リスト選択で
 	public Page<Restaurant> findByCategory(Category category, Pageable pageable);
 	
+	public Page<Restaurant> findByCategoryIn(Category[] category, Pageable pageable);
+	
 	//カテゴリ　かつ　キーワード検索：店名・住所・説明文のどれかにヒット
-	public Page<Restaurant> findByCategoryAndNameLikeOrAddressLikeOrDescriptionLike(Category category, String nameKeyword, String addressKeyword,String descriptionKeyword, Pageable pageable);
+	public Page<Restaurant> findByCategoryInAndNameLikeOrAddressLikeOrDescriptionLike(Category[] category, String nameKeyword, String addressKeyword,String descriptionKeyword, Pageable pageable);
 	//キーワード検索：店名・住所・説明文のどれかにヒット
     public Page<Restaurant> findByNameLikeOrAddressLikeOrDescriptionLike(String nameKeyword, String addressKeyword,String descriptionKeyword, Pageable pageable);    
 	

@@ -33,21 +33,27 @@ public class RestaurantController {
 
 	@GetMapping
 	public String index(@RequestParam(name = "keyword", required = false) String keyword,
-			@RequestParam(name = "categoryId", required = false) Integer categoryId,
+			@RequestParam(name = "categoryIds", required = false) Integer[] categoryIds,
 			@PageableDefault(page = 0, size = 10, sort = "id", direction = Direction.ASC) Pageable pageable,
 			Model model) {
 		
 		List<Category> categoryList = categoryRepository.findAll();
 		Page<Restaurant> restaurantPage;
 		
+		Category[] retaurantCategorys = null;
 		
-		//categoryRepository.getReferenceById(categoryId) をカテゴリ型変数にしたい
+		if (categoryIds != null) {
+			retaurantCategorys = new Category[categoryIds.length];
+			for (int i = 0; i< categoryIds.length; i++) {
+				retaurantCategorys[i] = categoryRepository.getReferenceById(categoryIds[i]);
+			}
+		}
 
-		if ((keyword != null && !keyword.isEmpty()) && categoryId != null) {
-			restaurantPage = restaurantRepository.findByCategoryAndNameLikeOrAddressLikeOrDescriptionLike(categoryRepository.getReferenceById(categoryId),
+		if ((keyword != null && !keyword.isEmpty()) && categoryIds != null) {
+			restaurantPage = restaurantRepository.findByCategoryInAndNameLikeOrAddressLikeOrDescriptionLike(retaurantCategorys,
 					"%" + keyword + "%", "%" + keyword + "%", "%" + keyword + "%", pageable);
-		} else if (categoryId != null) {
-			restaurantPage = restaurantRepository.findByCategory(categoryRepository.getReferenceById(categoryId), pageable);
+		} else if (categoryIds != null) {
+			restaurantPage = restaurantRepository.findByCategoryIn(retaurantCategorys, pageable);
 		} else if (keyword != null && !keyword.isEmpty()) {
 			restaurantPage = restaurantRepository.findByNameLikeOrAddressLikeOrDescriptionLike(
 					 "%" + keyword + "%", "%" + keyword + "%", "%" + keyword + "%", pageable);
@@ -59,7 +65,7 @@ public class RestaurantController {
 		model.addAttribute("categoryList", categoryList);
 		model.addAttribute("restaurantPage", restaurantPage);
 		model.addAttribute("keyword", keyword);
-		model.addAttribute("categoryId", categoryId);
+		model.addAttribute("categoryIds", categoryIds);
 		
 		
 		return "/index";

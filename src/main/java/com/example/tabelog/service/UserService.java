@@ -5,6 +5,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.example.tabelog.entity.Role;
 import com.example.tabelog.entity.User;
+import com.example.tabelog.form.PasswordResetForm;
 import com.example.tabelog.form.SignupForm;
 import com.example.tabelog.repository.RoleRepository;
 import com.example.tabelog.repository.UserRepository;
@@ -53,6 +54,14 @@ public class UserService {
         user.setEnabled(true); 
         userRepository.save(user);
     }    
+    
+    
+    //ユーザーパスワードを更新する
+    @Transactional
+    public void passwordUpdate(PasswordResetForm passwordResetForm) {
+    	User user = userRepository.getReferenceById(passwordResetForm.getUserId());
+    	user.setPassword(passwordEncoder.encode(passwordResetForm.getPassword()));
+    }
 	
 
 }

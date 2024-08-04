@@ -15,9 +15,6 @@
 	<div class="nagoyameshi-wrapper">
 		<!-- ヘッダー -->
 		<div th:replace="~{fragment :: header}"></div>
-
-
-
 		<main>
 			<div class="container pt-4 pb-5 nagoyameshi-container">
 				<div th:if="${param.loggedIn}" class="alert alert-info">
@@ -32,48 +29,29 @@
 				</div>
 
 			</div>
-
-
-
 			<div class="container pt-4 pb-5 nagoyameshi-container">
 				<div class="row justify-content-center">
 					<div class="col-xxl-9 col-xl-10 col-lg-11">
-
-
-
-
-
-
 						<h1 class="mb-4 text-center">NAGOYAMESHI</h1>
-
-
-
-
 						<!-- 検索フォーム -->
 						<div class="col-xl-3 col-lg-4 col-md-12">
 							<form method="get" th:action="@{/}" class="w-100 mb-3">
-
-
 								<input type="text" class="form-control" name="keyword" th:value="${keyword}"
 									placeholder="店名・キーワード">
-
 								<!-- チェックボックス　ボタンのように表示したい-->
 								<fieldset>
-									<div th:each="categoryOption : ${categoryList}">
-										<input type="checkbox" name="categoryId" th:value="${categoryOption.getId}"
-											th:checked="${categoryId == categoryOption.getId()}" />
-										<label for="item-1" th:text="${categoryOption.getCategoryName()}"></label>
+									<div class="checkbox-wrap" th:each="categoryOption : ${categoryList}">
+										<input th:id="'checkbox' + ${categoryOption.getId()}" type="checkbox"
+											name="categoryIds[]" th:value="${categoryOption.getId}"
+											class="checkbox-input"
+											th:checked="${categoryIds != null and #lists.contains(categoryIds, categoryOption.getId())}" />
+										<label th:for="'checkbox' + ${categoryOption.getId()}"
+											th:text="${categoryOption.getCategoryName()}"></label>
 									</div>
 								</fieldset>
-
 								<button type="submit" class="btn text-white shadow-sm nagoyameshi-btn">検索</button>
-
 							</form>
-
-
-
 						</div>
-
 						<div class="col">
 							<div class="d-flex justify-content-between flex-wrap">
 								<p th:if="${restaurantPage.getTotalPages() > 1}" class="fs-5 mb-3"
@@ -82,7 +60,6 @@
 								<p th:unless="${restaurantPage.getTotalPages() > 1}" class="fs-5 mb-3"
 									th:text="${'検索結果：' + restaurantPage.getTotalElements() + '件'}"></p>
 							</div>
-
 							<div class="mb-3" th:each="restaurant : ${restaurantPage}">
 								<a th:href="@{/__${restaurant.getId()}__}" class="link-dark nagoyameshi-card-link">
 									<div class="card h-100">
